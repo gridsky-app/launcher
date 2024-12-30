@@ -16,7 +16,9 @@ const iframeClasses = computed(() => {
 onMounted(() => {
   window.addEventListener('message', function(event) {
     if (event.data === 'mounted') {
-      iframeOpacity.value = true
+      setTimeout(() => {
+        iframeOpacity.value = true
+      }, 2000)
     }
   })
 })
