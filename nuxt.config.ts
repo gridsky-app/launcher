@@ -1,5 +1,6 @@
 import vuetify, {transformAssetUrls} from 'vite-plugin-vuetify'
 import { createResolver } from "@nuxt/kit";
+import path from "path";
 
 const { resolve } = createResolver(import.meta.url);
 
@@ -75,6 +76,12 @@ export default defineNuxtConfig({
                 }
             }
         },
+    },
+
+    nitro: {
+        output: {
+            publicDir: path.join(__dirname, 'docs')
+        }
     },
 
     compatibilityDate: '2024-11-28',
