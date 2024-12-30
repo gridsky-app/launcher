@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     srcDir: './src',
 
     app: {
+        baseURL: process.env.NUXT_PUBLIC_BASE_URL,
         head: {
             link: [
                 {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
