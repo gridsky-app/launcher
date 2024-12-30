@@ -1,7 +1,7 @@
 #!/bin/sh
 
 npm install
-npm run generate
+npx nuxi generate --dotenv .github.env
 rm -rf .output
 
 # disable jekyll to avoid any _problems
