@@ -29,7 +29,7 @@ function onLaunchClick(e: any) {
         Launch
       </a>
       <a
-          href="https://patreon.com/dxlliv"
+          href="https://discord.gg/bPfgdDbj87"
           target="_blank"
           class="text-grey"
       >
