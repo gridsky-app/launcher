@@ -18,7 +18,7 @@ onMounted(() => {
     if (event.data === 'mounted') {
       setTimeout(() => {
         iframeOpacity.value = true
-      }, 2000)
+      }, 1000)
     }
   })
 })

@@ -46,7 +46,7 @@ function onLaunch() {
 
   setTimeout(() => {
     window.location.href = 'https://gridsky.app'
-  }, display.mdAndUp ? 7000 : 2000)
+  }, display.mdAndUp ? 5000 : 1500)
 }
 
 useSeoMeta({
