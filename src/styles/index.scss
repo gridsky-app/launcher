@@ -1,5 +1,3 @@
-@use "./partials";
-
 html {
   overflow: hidden !important;
   font-size: 19px !important;
@@ -12,6 +10,29 @@ html {
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+}
+
+
+.v-theme--light {
+  --v-medium-emphasis-opacity: 0.5 !important;
+  --v-theme-primary: 0, 149, 246;
+
+  ::selection {
+    background: black;
+    color: white;
+  }
+}
+
+.v-theme--dark {
+  --v-medium-emphasis-opacity: 0.5 !important;
+  --v-theme-background: 4, 4, 4 !important;
+  --v-theme-primary: 0, 149, 246;
+  --v-border-opacity: 0.08 !important;
+
+  ::selection {
+    background: white;
+    color: black;
   }
 }
 

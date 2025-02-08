@@ -1,8 +1,8 @@
 import vuetify, {transformAssetUrls} from 'vite-plugin-vuetify'
-import { createResolver } from "@nuxt/kit";
+import {createResolver} from "@nuxt/kit";
 import path from "path";
 
-const { resolve } = createResolver(import.meta.url);
+const {resolve} = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
     devtools: {
@@ -45,6 +45,12 @@ export default defineNuxtConfig({
         '@nuxt/fonts',
         '@nuxt/icon',
         'nuxt-swiper',
+        '@pinia/nuxt',
+        '@vueuse/nuxt',
+    ],
+
+    extends: [
+        'github:gridsky-app/ui'
     ],
 
     i18n: {
@@ -77,6 +83,20 @@ export default defineNuxtConfig({
                 }
             }
         },
+    },
+
+    imports: {
+        dirs: ['stores'],
+        presets: [
+            {
+                from: 'vuetify',
+                imports: ['useDisplay']
+            },
+            {
+                from: '@vueuse/core',
+                imports: ['useDebounceFn']
+            }
+        ]
     },
 
     nitro: {

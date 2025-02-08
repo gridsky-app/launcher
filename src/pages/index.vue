@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {useDisplay} from "vuetify"
+import {useDisplay} from "vuetify";
 
+const appPreviewStore = useAppPreviewStore()
+const sliderLauncherStore = useSliderLauncherStore()
 const display = useDisplay()
-
-const slider: any = useTemplateRef('slider')
 
 const firstSliderWidth = computed(() => {
   if (display.lgAndUp.value) {
@@ -23,32 +23,6 @@ const firstSliderWidth = computed(() => {
   }
 })
 
-onMounted(() => {
-  if (!slider.value) {
-    return
-  }
-
-  const sliderConfig = {
-    on: {
-      slideChange() {
-        onLaunch()
-      }
-    }
-  }
-
-  Object.assign(slider.value, sliderConfig)
-
-  slider.value.initialize()
-})
-
-function onLaunch() {
-  slider.value.swiper.slideTo(1, 500)
-
-  setTimeout(() => {
-    window.location.href = 'https://gridsky.app'
-  }, display.mdAndUp ? 5000 : 1500)
-}
-
 useSeoMeta({
   title: 'Bluesky with creativity superpowers',
   description: 'Gridsky brings the Instagram experience to Bluesky, offering an alternative client that unleashes boundless creativity in your favorite decentralized network',
@@ -57,21 +31,28 @@ useSeoMeta({
 </script>
 
 <template>
-  <swiper-container
-      ref="slider"
-      class="fill-height"
-      slides-per-view="auto"
-      :init="false"
-  >
+  <AppPhone>
+    <iframe :src="appPreviewStore.src"/>
+  </AppPhone>
+
+  <SliderLauncher>
     <swiper-slide :style="firstSliderWidth">
 
       <v-row no-gutters class="fill-height">
-        <v-col
-            :cols="11" :md="6" :offset="1" :offset-md="2"
-            class="fill-height" style="align-content: center;"
-        >
+        <v-col :cols="7" :offset="5" class="bg-background">
 
-          <AppIntro @launch="onLaunch"/>
+          <SliderMain>
+            <swiper-slide>
+
+              <BlockIntro @launch="sliderLauncherStore.launch"/>
+
+            </swiper-slide>
+            <swiper-slide>
+
+              <BlockPreview/>
+
+            </swiper-slide>
+          </SliderMain>
 
         </v-col>
         <v-col class="hidden-sm-and-down"/>
@@ -81,15 +62,32 @@ useSeoMeta({
     <client-only>
       <swiper-slide style="width: 100vw;">
 
-        <AppIframe
-            @launch="onLaunch"
+        <LauncherIframe
+            @launch="sliderLauncherStore.launch"
         />
 
       </swiper-slide>
     </client-only>
-  </swiper-container>
+  </SliderLauncher>
 </template>
 
 <style scoped lang="scss">
+.gsky-phone {
+  position: absolute;
+  top: 50vh;
+  transform: translate(0, -50%);
+  left: 10vw;
+  margin-top: 64px;
+  z-index: v-bind('sliderLauncherStore.phoneZ');
+}
 
+@media(max-width: 640px) {
+  .text-h1 {
+    font-size: 76px !important;
+  }
+
+  .text-subtitle-1 {
+    font-size: 17px !important;
+  }
+}
 </style>

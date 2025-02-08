@@ -44,9 +44,14 @@ iframe {
 }
 
 .gsky-iframe {
+  position: relative;
   width: calc(100vw + 1px);
+  height: 100dvh;
   border-left: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   margin-left: -1px;
+  margin-top: -64px;
+  z-index: 999999;
+
 
   @media(max-width: 599px) {
     width: 100vw;
