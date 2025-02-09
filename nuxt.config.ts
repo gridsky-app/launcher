@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         baseURL: process.env.NUXT_PUBLIC_BASE_URL,
         head: {
             link: [
-                {rel: 'icon', type: 'image/png', href: '/favicon.png'},
+                {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
             ],
         }
     },
