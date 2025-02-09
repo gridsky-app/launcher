@@ -49,14 +49,13 @@ iframe {
   height: 100dvh;
   border-left: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   margin-left: -1px;
-  margin-top: -64px;
   z-index: 999999;
-
 
   @media(max-width: 599px) {
     width: 100vw;
     border-left: 0;
     margin-left: 0;
+    margin-top: 0;
   }
 
   &--visible {

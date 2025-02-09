@@ -5,7 +5,7 @@
   <v-layout>
 
     <v-main width="100%" max-height="100dvh" class="fill-height scrollbar-invisible">
-      <header class="hidden-xs" style="">
+      <header class="hidden-xs">
         <ToolbarBanner />
         <ToolbarNav />
         <v-divider />
@@ -17,9 +17,11 @@
   </v-layout>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 </style>

@@ -9,17 +9,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <swiper-container
-      ref="slider"
-      direction="vertical"
-      style="height: calc(100vh - 128px);"
-      mousewheel
-  >
-    <slot />
-  </swiper-container>
+  <v-row no-gutters class="fill-height">
+    <v-col :cols="12" :lg="7" :offset-lg="5" class="bg-background">
+
+      <swiper-container
+          ref="slider"
+          direction="vertical"
+          mousewheel
+      >
+        <slot/>
+      </swiper-container>
+
+    </v-col>
+    <v-col class="hidden-sm-and-down"/>
+  </v-row>
 </template>
 
 <style scoped lang="scss">
+swiper-container {
+  height: calc(100dvh);
+}
+
 :deep(swiper-slide) {
   display: grid;
   align-content: center;

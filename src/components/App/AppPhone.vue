@@ -51,7 +51,6 @@
     &__signal {
       position: relative;
       display: inline-block;
-      top: 2px;
 
       .iconify {
         display: inline-block;

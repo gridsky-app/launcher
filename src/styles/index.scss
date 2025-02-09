@@ -45,6 +45,10 @@ a {
   text-decoration: none;
 }
 
+.text-h1 {
+  font-size: 5.6rem !important;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -56,4 +60,34 @@ a {
 .scrollbar-invisible {
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+body {
+  .v-overlay__scrim {
+    background: black;
+    backdrop-filter: blur(24px);
+    opacity: 0.8;
+  }
+
+  .v-tooltip .text-overline {
+    font-size: 12px !important;
+  }
+}
+
+.iconify {
+  vertical-align: middle;
+}
+
+swiper-container {
+  --swiper-pagination-color: #666;
+  --swiper-pagination-bullet-border-radius: 2px;
+  --swiper-pagination-bullet-vertical-gap: 8px;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #242424;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-top: 0;
+  --swiper-pagination-right: 16px;
+  --swiper-pagination-bottom: auto;
 }

@@ -8,21 +8,24 @@
   },
   "scripts": {
     "build": "nuxt generate",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate --dev",
     "postinstall": "nuxt prepare",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "publish": "npm run generate && cp -r src/public/loading/ docs/loading && wrangler pages deploy docs && npm run dev"
   },
   "dependencies": {
+    "@atproto/api": "^0.13.31",
     "@nuxt/fonts": "^0.10.2",
     "@nuxt/icon": "^1.10.0",
     "@nuxtjs/i18n": "^8.5.6",
     "@pinia/nuxt": "^0.9.0",
     "@vueuse/core": "^12.5.0",
     "@vueuse/nuxt": "^12.5.0",
+    "ethers": "^6.13.5",
     "nuxt": "^3.14.1592",
-    "pinia": "^2.3.1",
     "nuxt-swiper": "^2.0.0",
+    "pinia": "^2.3.1",
     "sass": "^1.81.0",
     "vite-plugin-vuetify": "^2.0.4"
   }

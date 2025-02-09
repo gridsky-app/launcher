@@ -3,11 +3,18 @@
 </script>
 
 <template>
-  <v-sheet class="text-center text-caption text-grey-darken-1 py-3" color="#111">
-    Unleash your profile appeal forever!
-    Get the Lifetime Plan
-    <Icon name="lucide:arrow-up-right" :size="17" style="vertical-align: -4px;" />
-  </v-sheet>
+  <a href="https://discord.gg/bPfgdDbj87" target="_blank">
+    <v-sheet
+        class="text-center text-caption text-grey-darken-1 py-2" color="#111"
+    >
+      Our Discord server is pretty quiet! Jump in and make some noise
+      <!--
+      Unleash your profile appeal forever!
+      Get the Lifetime Pass
+      -->
+      <Icon name="lucide:arrow-up-right" :size="17" style="vertical-align: -4px;" />
+    </v-sheet>
+  </a>
 </template>
 
 <style scoped lang="scss">

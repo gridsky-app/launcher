@@ -26,10 +26,10 @@ export default defineNuxtConfig({
 
     css: [
         'vuetify/styles',
-        '@/styles/index.scss',
         'swiper/css',
         'swiper/css/pagination',
         'swiper/css/navigation',
+        '@/styles/index.scss',
     ],
 
     modules: [
@@ -86,7 +86,7 @@ export default defineNuxtConfig({
     },
 
     imports: {
-        dirs: ['stores'],
+        dirs: ['composables', 'stores'],
         presets: [
             {
                 from: 'vuetify',

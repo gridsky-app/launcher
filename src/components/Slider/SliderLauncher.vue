@@ -24,6 +24,6 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .gsky-horizontal-slider {
-  height: calc(100dvh - 129px) !important;
+  padding-top: 66px;
 }
 </style>
