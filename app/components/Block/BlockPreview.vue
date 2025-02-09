@@ -6,9 +6,12 @@ const appPreviewStore = useAppPreviewStore()
   <BlockLayout>
 
     <BlockHero
-        title="Preview"
-        subtitle="your profile"
-        description="Let's see how your profile looks<br/> on our brand-new Bluesky client."
+        :title="$t('block.preview.title')"
+        :subtitle="$t('block.preview.subtitle')"
+        :description="[
+          $t('block.preview.description.line1'),
+          $t('block.preview.description.line2'),
+        ]"
     >
       <FormFieldUsername
           v-if="$vuetify.display.lgAndUp"

@@ -17,39 +17,37 @@ const sliderMainStore = useSliderMainStore()
           <v-breadcrumbs-item
               class="mx-2 cursor-pointer"
               @click="sliderMainStore.slideTo(0)"
-          >
-            Explore
-          </v-breadcrumbs-item>
+              :title="$t('toolbar.nav.explore')"
+          />
           <v-breadcrumbs-item
               class="mx-2 cursor-pointer"
               @click="sliderMainStore.slideTo(1)"
+              :title="$t('toolbar.nav.preview')"
+          />
+          <v-breadcrumbs-item
+              class="mx-2 cursor-pointer"
           >
-            Preview
-          </v-breadcrumbs-item>
-          <v-breadcrumbs-item class="mx-2 cursor-pointer">
-            Roadmap
+            {{$t('toolbar.nav.roadmap')}}
             <v-tooltip
                 activator="parent"
                 content-class="text-overline"
                 location="bottom"
             >
-              Getting ready
+              {{$t('toolbar.nav.roadmapStatus')}}
             </v-tooltip>
           </v-breadcrumbs-item>
           <v-breadcrumbs-item
               class="mx-2 hidden-sm-and-down"
               href="https://discord.com/channels/1312466374282580069/1337499584917667941"
               target="_blank"
-          >
-            Feedback
-          </v-breadcrumbs-item>
+              :title="$t('toolbar.nav.feedback')"
+          />
           <v-breadcrumbs-item
               class="mx-2 hidden-sm-and-down"
               href="https://discord.com/channels/1312466374282580069/1337499697258168361"
               target="_blank"
-          >
-            Support
-          </v-breadcrumbs-item>
+              :title="$t('toolbar.nav.support')"
+          />
           <v-breadcrumbs-item
               class="mx-2 ml-3 hidden-xs"
               href="mailto:sponsor@gridsky.social"
@@ -69,15 +67,17 @@ const sliderMainStore = useSliderMainStore()
         <div class="float-right">
           <v-btn href="https://patreon.com/dxlliv" target="_blank" variant="tonal" class="px-0 mr-3" :min-width="36">
             <Icon name="simple-icons:googleplay" :size="16" />
-            <v-tooltip activator="parent" content-class="text-overline" location="bottom">SOON</v-tooltip>
+            <v-tooltip activator="parent" content-class="text-overline" location="bottom" :text="$t('common.soon')" />
           </v-btn>
           <v-btn href="https://patreon.com/dxlliv" target="_blank" variant="tonal" class="px-0 mr-3" :min-width="36">
             <Icon name="simple-icons:appstore" :size="16" />
-            <v-tooltip activator="parent" content-class="text-overline" location="bottom">SOON</v-tooltip>
+            <v-tooltip activator="parent" content-class="text-overline" location="bottom" :text="$t('common.soon')" />
           </v-btn>
-          <v-btn variant="tonal" class="mr-6" @click="sliderLauncherStore.launch">
-            Launch App
-          </v-btn>
+          <v-btn
+              variant="tonal" class="mr-6"
+              :text="$t('common.launchApp')"
+              @click="sliderLauncherStore.launch"
+          />
         </div>
       </v-col>
     </v-row>

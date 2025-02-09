@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const appPreviewStore = useAppPreviewStore()
 const sliderLauncherStore = useSliderLauncherStore()
 const sliderMainStore = useSliderMainStore()
 const display = useDisplay()
+const {t} = useI18n()
 
 const firstSliderWidth = computed(() => {
   if (display.lgAndUp.value) {
@@ -23,17 +23,13 @@ const firstSliderWidth = computed(() => {
 })
 
 useSeoMeta({
-  title: 'Bluesky with creativity superpowers',
-  description: 'Gridsky brings the Instagram experience to Bluesky, offering an alternative client that unleashes boundless creativity in your favorite social network',
+  title: t('page.index.title'),
+  description: t('page.index.description'),
   ogImage: '/assets/og-image.png'
 })
 </script>
 
 <template>
-  <AppPhone class="hidden-md-and-down">
-    <iframe :src="appPreviewStore.src"/>
-  </AppPhone>
-
   <SliderLauncher>
     <swiper-slide :style="firstSliderWidth">
 
@@ -67,23 +63,6 @@ useSeoMeta({
 </template>
 
 <style scoped lang="scss">
-.gsky-phone {
-  position: absolute;
-  top: 50dvh;
-  transform: translate(0, -50%);
-  left: 9vw;
-  margin-top: 64px;
-  z-index: v-bind('sliderLauncherStore.phoneZ');
-
-  @media(max-height: 800px) {
-    top: 60dvh;
-  }
-
-  @media(max-height: 640px) {
-    display: none;
-  }
-}
-
 @media(max-width: 640px) {
   :deep(.text-h1) {
     font-size: 76px !important;

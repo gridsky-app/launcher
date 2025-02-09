@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const appPreviewStore = useAppPreviewStore()
+const sliderLauncherStore = useSliderLauncherStore()
 const sliderMainStore = useSliderMainStore()
 
 const element: any = useTemplateRef('slider')
@@ -10,7 +12,14 @@ onMounted(() => {
 
 <template>
   <v-row no-gutters class="fill-height">
-    <v-col :cols="12" :lg="7" :offset-lg="5" class="bg-background">
+    <v-col :lg="6" class="hidden-md-and-down position-relative">
+
+      <AppPhone>
+        <iframe :src="appPreviewStore.src"/>
+      </AppPhone>
+
+    </v-col>
+    <v-col :cols="12" :lg="6" class="bg-background">
 
       <swiper-container
           ref="slider"
@@ -33,5 +42,17 @@ swiper-container {
 :deep(swiper-slide) {
   display: grid;
   align-content: center;
+}
+
+.gsky-phone {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 75vh;
+  transform: translateX(-50%);
+
+  @media(max-height: 640px) {
+    display: none;
+  }
 }
 </style>

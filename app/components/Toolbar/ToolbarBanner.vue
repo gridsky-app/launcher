@@ -7,7 +7,7 @@
     <v-sheet
         class="text-center text-caption text-grey-darken-1 py-2" color="#111"
     >
-      Our Discord server is pretty quiet! Jump in and make some noise
+      {{$t('toolbar.banner')}}
       <!--
       Unleash your profile appeal forever!
       Get the Lifetime Pass

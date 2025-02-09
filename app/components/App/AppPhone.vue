@@ -57,7 +57,7 @@
       }
     }
 
-    span {
+    .gsky-phone__datetime {
       display: block;
       font-weight: bold;
       font-size: 10px;

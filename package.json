@@ -12,21 +12,21 @@
     "generate": "nuxt generate --dev",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "publish": "npm run generate && cp -r src/public/loading/ docs/loading && wrangler pages deploy docs && npm run dev"
+    "publish": "npm run generate && wrangler pages deploy docs && npm run dev"
   },
   "dependencies": {
-    "@atproto/api": "^0.13.31",
-    "@nuxt/fonts": "^0.10.2",
-    "@nuxt/icon": "^1.10.0",
-    "@nuxtjs/i18n": "^8.5.6",
+    "@atproto/api": "^0.13.35",
+    "@nuxt/fonts": "^0.10.3",
+    "@nuxt/icon": "^1.10.3",
+    "@nuxtjs/i18n": "^9.2.0",
     "@pinia/nuxt": "^0.9.0",
     "@vueuse/core": "^12.5.0",
     "@vueuse/nuxt": "^12.5.0",
     "ethers": "^6.13.5",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^3.15.4",
     "nuxt-swiper": "^2.0.0",
     "pinia": "^2.3.1",
-    "sass": "^1.81.0",
-    "vite-plugin-vuetify": "^2.0.4"
+    "sass": "^1.84.0",
+    "vite-plugin-vuetify": "^2.1.0"
   }
 }

@@ -5,23 +5,25 @@ import path from "path";
 const {resolve} = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
+    future: {
+        compatibilityVersion: 4,
+    },
+
     devtools: {
         enabled: true
     },
-
-    srcDir: './src',
 
     app: {
         baseURL: process.env.NUXT_PUBLIC_BASE_URL,
         head: {
             link: [
-                {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg'},
+                {rel: 'icon', type: 'image/png', href: '/favicon.png'},
             ],
         }
     },
 
     alias: {
-        "@": resolve(__dirname, "./src")
+        "@": resolve(__dirname, "./app")
     },
 
     css: [
@@ -54,11 +56,8 @@ export default defineNuxtConfig({
     ],
 
     i18n: {
-        langDir: './locales',
+        locales: ['en', 'it', 'es', 'fr', 'de', 'pt', 'ru'],
         defaultLocale: 'en',
-        locales: [
-            {title: 'English', code: 'en', file: 'en/index.ts'},
-        ],
         detectBrowserLanguage: {
             useCookie: true,
             cookieKey: 'i18n_redirected',
@@ -86,7 +85,7 @@ export default defineNuxtConfig({
     },
 
     imports: {
-        dirs: ['composables', 'stores'],
+        dirs: ['composables', 'stores', 'utils'],
         presets: [
             {
                 from: 'vuetify',

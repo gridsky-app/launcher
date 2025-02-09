@@ -12,24 +12,25 @@ function onLaunchClick(e: any) {
   <BlockLayout>
 
     <BlockHero
-        title="Gridsky"
-        subtitle="on a mission"
-        description="Bringing the Instagram experience<br/> to the Bluesky social networks."
+        :title="$t('block.intro.title')"
+        :subtitle="$t('block.intro.subtitle')"
+        :description="[
+          $t('block.intro.description.line1'),
+          $t('block.intro.description.line2'),
+        ]"
     >
       <BlockHeroLinks>
         <a
             href="https://gridsky.app"
             class="text-grey mr-4"
             @click="onLaunchClick"
-        >
-          Launch
-        </a>
+            v-text="$t('block.intro.links.launch')"
+        />
         <a
             @click="emit('preview')"
             class="text-grey cursor-pointer"
-        >
-          Preview your profile
-        </a>
+            v-text="$t('block.intro.links.preview')"
+        />
       </BlockHeroLinks>
     </BlockHero>
 

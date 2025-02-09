@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  doesNotExistNotice: boolean
+  doesNotExistNotice?: boolean
 }>()
 
 const appPreviewStore = useAppPreviewStore()
@@ -36,7 +36,7 @@ watch(() => appPreviewStore.username, (val) => {
 
 <template>
   <v-text-field
-      placeholder="Type your username"
+      :placeholder="$t('form.field.username.placeholder')"
       variant="outlined"
       rounded="lg"
       spellcheck="false"
@@ -68,14 +68,17 @@ watch(() => appPreviewStore.username, (val) => {
         :offset="[15, 0]"
     >
       <v-card rounded="lg" href="https://bsky.app/" target="_blank">
-        <v-card-text class="pb-0">
-          This profile does not exist :O<br />
-          Would you like to register first?<br />
+        <v-card-text
+            class="pb-0"
+        >
+          {{ $t('form.field.username.notice.unavailable.line1')}}<br />
+          {{ $t('form.field.username.notice.unavailable.line2')}}
         </v-card-text>
         <v-card-actions>
-          <v-btn flat readonly>
-            Join  Bluesky
-          </v-btn>
+          <v-btn
+              flat readonly
+              :text="$t('form.field.username.notice.action')"
+          />
         </v-card-actions>
       </v-card>
     </v-menu>
