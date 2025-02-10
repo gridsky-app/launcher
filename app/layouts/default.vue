@@ -8,7 +8,6 @@
       <header>
         <ToolbarBanner class="hidden-xs" />
         <ToolbarNav />
-        <v-divider />
       </header>
 
       <NuxtPage/>

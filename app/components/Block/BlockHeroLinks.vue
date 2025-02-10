@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-subtitle-1 mt-2">
+  <div class=" mt-2">
     <slot />
   </div>
 </template>

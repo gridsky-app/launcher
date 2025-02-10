@@ -4,7 +4,10 @@ const sliderMainStore = useSliderMainStore()
 </script>
 
 <template>
-  <v-toolbar class="gsky-toolbar-nav" :height="80" border color="background">
+  <v-toolbar
+      class="gsky-toolbar-nav" :height="80"
+      :border="$vuetify.display.smAndUp" color="background"
+  >
     <v-row>
       <v-col class="flex-grow-0 gsky-toolbar-nav__logo" align-self="center">
         <div class="pl-8">
@@ -92,7 +95,9 @@ const sliderMainStore = useSliderMainStore()
 
 <style scoped lang="scss">
 .gsky-toolbar-nav {
-  border-width: 0 0 1px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 
   &__logo {
     min-width: 300px;

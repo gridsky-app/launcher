@@ -28,6 +28,10 @@ onMounted(() => {
 
   @media(max-width: 599px) {
     padding-top: 80px;
+
+    :deep(swiper-container) {
+      height: calc(100dvh - 80px);
+    }
   }
 }
 </style>

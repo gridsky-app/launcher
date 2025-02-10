@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <h1 class="text-h1 font-weight-thin ml-n2" v-text="title" />
   <div class="text-overline text-grey-darken-2 mt-6" v-text="subtitle" />
-  <p class="text-subtitle-1">
+  <p>
     {{description[0]}}<br />
     {{description[1]}}
   </p>
