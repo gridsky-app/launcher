@@ -15,7 +15,7 @@ const sliderMainStore = useSliderMainStore()
           <span class="font-weight-bold ml-3 hidden-md-and-down" style="font-size: 28px; vertical-align: middle;">Gridsky</span>
         </div>
       </v-col>
-      <v-col class="flex-grow-1 text-center hidden-sm-and-down">
+      <v-col class="flex-grow-1 text-center">
         <v-breadcrumbs class="mx-auto">
           <v-breadcrumbs-item
               class="mx-2 cursor-pointer"
@@ -52,13 +52,13 @@ const sliderMainStore = useSliderMainStore()
               :title="$t('toolbar.nav.support')"
           />
           <v-breadcrumbs-item
-              class="mx-2 ml-3"
+              class="mx-2 ml-3 hidden-sm-and-down"
               href="mailto:sponsor@gridsky.social"
           >
             <Icon name="lucide:at-sign"/>
           </v-breadcrumbs-item>
           <v-breadcrumbs-item
-              class="mx-2"
+              class="mx-2 hidden-sm-and-down"
               href="https://discord.gg/bPfgdDbj87"
               target="_blank"
           >

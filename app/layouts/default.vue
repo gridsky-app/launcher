@@ -5,7 +5,7 @@
   <v-layout>
 
     <v-main width="100%" max-height="100dvh" class="fill-height scrollbar-invisible">
-      <header>
+      <header class="gsky-header">
         <ToolbarBanner class="hidden-xs" />
         <ToolbarNav />
       </header>
@@ -17,7 +17,7 @@
 </template>
 
 <style scoped lang="scss">
-header {
+.gsky-header {
   position: fixed;
   left: 0;
   right: 0;
