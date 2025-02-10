@@ -54,15 +54,16 @@
 
       .iconify {
         display: inline-block;
+        font-size: 16px;
       }
     }
 
     .gsky-phone__datetime {
       display: block;
       font-weight: bold;
-      font-size: 10px;
+      font-size: 15px;
       margin-left: 32px;
-      margin-top: 1px;
+      margin-top: 2px;
     }
 
     b {
@@ -102,7 +103,7 @@
   :deep(iframe) {
     border: 0;
     border-radius: 0 0 20px 20px;
-    min-width: 310px;
+    min-width: 100%;
     min-height: 100%;
   }
 }

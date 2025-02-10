@@ -69,7 +69,7 @@ export default {
             banner: "¡Nuestro servidor de Discord está bastante vacío! Únete y ayúdanos a ponerlo en marcha",
             nav: {
                 explore: "Explorar",
-                preview: "Vista previa",
+                preview: "Previa",
                 roadmap: "Ruta",
                 roadmapStatus: "En preparación",
                 feedback: "Comentarios",
@@ -90,7 +90,7 @@ export default {
                 }
             },
             preview: {
-                title: "Vista previa",
+                title: "Previa",
                 subtitle: "tu perfil",
                 description: {
                     line1: "Veamos cómo aparece tu perfil",
@@ -122,7 +122,7 @@ export default {
     fr: {
         name: 'Gridsky',
         common: {
-            launchApp: "Lancer l'application",
+            launchApp: "Lancer l'app",
             soon: "bientôt",
         },
         toolbar: {
@@ -130,7 +130,7 @@ export default {
             nav: {
                 explore: "Explorer",
                 preview: "Aperçu",
-                roadmap: "Feuille de route",
+                roadmap: "Roadmap",
                 roadmapStatus: "En préparation",
                 feedback: "Retour",
                 support: "Support",
@@ -249,7 +249,7 @@ export default {
             banner: "Il nostro server Discord è piuttosto vuoto! Entra e aiutaci a farlo partire",
             nav: {
                 explore: "Esplora",
-                preview: "Anteprima",
+                preview: "Preview",
                 roadmap: "Roadmap",
                 roadmapStatus: "In preparazione",
                 feedback: "Feedback",
@@ -261,7 +261,7 @@ export default {
                 title: "Gridsky",
                 subtitle: "in una missione",
                 description: {
-                    line1: "Portando l'esperienza di Instagram",
+                    line1: "Portando l'esperienza Instagram",
                     line2: "sulla rete sociale di Bluesky.",
                 },
                 links: {
@@ -270,11 +270,11 @@ export default {
                 }
             },
             preview: {
-                title: "Anteprima",
-                subtitle: "il tuo profilo",
+                title: "Preview",
+                subtitle: "del tuo profilo",
                 description: {
                     line1: "Vediamo come appare il tuo profilo",
-                    line2: "sul nostro nuovo client Bluesky.",
+                    line2: "sul nostro nuovo client per Bluesky.",
                 },
             },
         },

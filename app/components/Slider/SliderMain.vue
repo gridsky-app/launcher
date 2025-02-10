@@ -24,7 +24,7 @@ onMounted(() => {
       <swiper-container
           ref="slider"
           direction="vertical"
-          mousewheel
+          mousewheel :pagination="$vuetify.display.xs"
       >
         <slot/>
       </swiper-container>

@@ -5,8 +5,8 @@
   <v-layout>
 
     <v-main width="100%" max-height="100dvh" class="fill-height scrollbar-invisible">
-      <header class="hidden-xs">
-        <ToolbarBanner />
+      <header>
+        <ToolbarBanner class="hidden-xs" />
         <ToolbarNav />
         <v-divider />
       </header>

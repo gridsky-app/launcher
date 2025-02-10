@@ -11,7 +11,7 @@ const firstSliderWidth = computed(() => {
     }
   }
 
-  if (display.width.value < 640) {
+  if (display.width.value < 600) {
     return {
       width: '100vw'
     }
@@ -63,13 +63,23 @@ useSeoMeta({
 </template>
 
 <style scoped lang="scss">
-@media(max-width: 640px) {
+@media(max-width: 679px) {
   :deep(.text-h1) {
     font-size: 76px !important;
   }
 
   :deep(.text-subtitle-1) {
     font-size: 17px !important;
+  }
+}
+
+@media(max-width: 480px) {
+  :deep(.text-h1) {
+    font-size: 64px !important;
+  }
+
+  :deep(.text-subtitle-1) {
+    font-size: 16px !important;
   }
 }
 </style>
