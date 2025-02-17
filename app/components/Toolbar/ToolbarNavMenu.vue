@@ -14,7 +14,7 @@ defineProps<{
         :href="href"
         :target="target"
         class="mt-6 overflow-hidden"
-        variant="plain"
+        variant="plain" border rounded="lg"
         :ripple="false"
         :min-width="220"
     >

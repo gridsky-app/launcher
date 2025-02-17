@@ -9,7 +9,7 @@ defineProps<{
       subtitle="What's going on"
       icon="lucide:audio-waveform"
   >
-    <v-divider class="mx-n12 my-6" />
+    <v-divider class="mx-n12 mt-6 mb-4" />
     <v-list class="bg-transparent pa-0">
       <v-list-item class="px-0">
         <div class="text-overline text-grey-darken-3">

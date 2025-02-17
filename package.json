@@ -12,7 +12,7 @@
     "generate": "nuxt generate --dev",
     "postinstall": "nuxt prepare",
     "preview": "nuxt preview",
-    "publish": "npm run generate && wrangler pages deploy docs && npm run dev"
+    "publish": "npm run generate && wrangler pages deploy dist && npm run dev"
   },
   "dependencies": {
     "@atproto/api": "^0.13.35",

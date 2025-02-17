@@ -1,8 +1,33 @@
+<script setup lang="ts">
+const wifiStrength = ref(3)
+const mobileStrength = ref(3)
+
+const changeWifiStrength = () => {
+  wifiStrength.value = Math.floor(Math.random() * 3) + 1
+  setTimeout(changeWifiStrength, Math.random() * 10000 + 5000)
+}
+
+const changeMobileStrength = () => {
+  mobileStrength.value = Math.random() < 0.8 ? 3 : 2
+  setTimeout(changeWifiStrength, Math.random() * 10000 + 8000)
+}
+
+onBeforeMount(changeWifiStrength)
+onBeforeMount(changeMobileStrength)
+</script>
+
 <template>
   <div class="gsky-phone">
 
     <div class="gsky-phone__nav">
 
+      <div class="gsky-phone__nav__icons-preload">
+        <Icon name="mdi:wifi-strength-2" />
+        <Icon name="mdi:wifi-strength-3" />
+        <Icon name="mdi:wifi-strength-4" />
+        <Icon name="mdi:signal-cellular-2" />
+        <Icon name="mdi:signal-cellular-3" />
+      </div>
       <v-row>
         <v-col class="text-left">
           <b />
@@ -10,8 +35,8 @@
         </v-col>
         <v-col class="text-right">
           <div class="gsky-phone__nav__signal">
-            <Icon name="mdi:wifi" class="ms-1" />
-            <Icon name="mdi:signal" class="ms-1" />
+            <Icon :name="`mdi:wifi-strength-${wifiStrength}`" class="ms-1" />
+            <Icon :name="`mdi:signal-cellular-${mobileStrength}`" class="ms-1" :size="15" style="margin-top: 2px" />
           </div>
         </v-col>
       </v-row>
@@ -48,6 +73,14 @@
     font-size: 8px;
     text-align: right;
     color: white;
+
+    &__icons-preload {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      pointer-events: none;
+    }
 
     &__signal {
       position: relative;

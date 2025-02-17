@@ -52,9 +52,13 @@ const sliderMainStore = useSliderMainStore()
           </v-breadcrumbs-item>
           <v-breadcrumbs-item
               class="mx-2 ml-3 hidden-xs"
-              href="mailto:sponsor@gridsky.social"
           >
-            <Icon name="lucide:at-sign" :size="18"/>
+            <nuxt-link
+                href="https://discord.gg/bPfgdDbj87"
+                target="_blank"
+            >
+              <Icon name="simple-icons:discord" :size="22"/>
+            </nuxt-link>
           </v-breadcrumbs-item>
           <v-breadcrumbs-item
               class="mx-2 hidden-xs"
@@ -68,13 +72,9 @@ const sliderMainStore = useSliderMainStore()
           </v-breadcrumbs-item>
           <v-breadcrumbs-item
               class="mx-2 hidden-xs"
+              href="mailto:sponsor@gridsky.social"
           >
-            <nuxt-link
-                href="https://discord.gg/bPfgdDbj87"
-                target="_blank"
-            >
-              <Icon name="simple-icons:discord" :size="23"/>
-            </nuxt-link>
+            <Icon name="lucide:at-sign" :size="19" style="margin-top: -4px;"/>
           </v-breadcrumbs-item>
         </v-breadcrumbs>
       </v-col>
@@ -163,6 +163,6 @@ a {
 }
 
 .iconify {
-  margin-top: -2px;
+  margin-top: -3px;
 }
 </style>
