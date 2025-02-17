@@ -26,7 +26,7 @@ const debounceResolveUsername = useDebounceFn(() => {
             })
       })
       .catch(() => error.value = true)
-}, 1000)
+}, 400)
 
 watch(() => appPreviewStore.username, (val) => {
   appPreviewStore.profile = null
@@ -41,6 +41,8 @@ watch(() => appPreviewStore.username, (val) => {
       rounded="lg"
       spellcheck="false"
       hide-details
+      bg-color="transparent"
+      :max-width="340"
   >
     <template #prepend-inner>
       <v-avatar

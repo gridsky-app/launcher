@@ -5,7 +5,7 @@
 <template>
   <a href="https://discord.gg/bPfgdDbj87" target="_blank">
     <v-sheet
-        class="text-center text-caption text-grey-darken-1 py-2" color="#111"
+        class="text-center text-caption text-grey-darken-2 py-2" color="#0B0B0B"
     >
       {{$t('toolbar.banner')}}
       <!--

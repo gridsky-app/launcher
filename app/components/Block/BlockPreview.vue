@@ -18,7 +18,6 @@ const appPreviewStore = useAppPreviewStore()
           v-model="appPreviewStore.username"
           density="compact"
           class="mt-6"
-          :max-width="340"
           does-not-exist-notice
       >
         <template #append-inner>
@@ -30,8 +29,7 @@ const appPreviewStore = useAppPreviewStore()
       <FormFieldUsernameCompact
           v-else
           density="compact"
-          :width="340" class="mt-5"
-          max-width="calc(100vw - (8.3333333333% * 2))"
+          class="mt-5 pr-6"
       />
     </BlockHero>
 

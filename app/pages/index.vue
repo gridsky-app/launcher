@@ -1,66 +1,56 @@
 <script setup lang="ts">
+const appPreviewStore = useAppPreviewStore()
 const sliderLauncherStore = useSliderLauncherStore()
 const sliderMainStore = useSliderMainStore()
-const display = useDisplay()
 const {t} = useI18n()
-
-const firstSliderWidth = computed(() => {
-  if (display.lgAndUp.value) {
-    return {
-      width: 'calc(100vw - 319px)'
-    }
-  }
-
-  if (display.width.value < 600) {
-    return {
-      width: '100vw'
-    }
-  }
-
-  return {
-    width: 'calc(100vw - 97px)'
-  }
-})
 
 useSeoMeta({
   title: t('page.index.title'),
   description: t('page.index.description'),
   ogImage: '/assets/og-image.png'
 })
+
+definePageMeta({
+  layout: 'slider',
+})
 </script>
 
 <template>
-  <SliderLauncher>
-    <swiper-slide :style="firstSliderWidth">
+  <AppPhone class="hidden-sm-and-down">
+    <iframe :src="appPreviewStore.src"/>
+  </AppPhone>
 
-      <SliderMain>
-        <swiper-slide>
+  <ToolbarNav/>
 
-          <BlockIntro
-              @launch="sliderLauncherStore.launch"
-              @preview="sliderMainStore.slideTo(1)"
-          />
+  <SliderMain>
 
-        </swiper-slide>
-        <swiper-slide>
+    <swiper-slide>
 
-          <BlockPreview/>
-
-        </swiper-slide>
-      </SliderMain>
+      <BlockIntro
+          @launch="sliderLauncherStore.launch"
+          @preview="sliderMainStore.slideTo(1)"
+      />
 
     </swiper-slide>
-    <client-only>
-      <swiper-slide style="width: 100vw;">
+    <swiper-slide>
 
-        <LauncherIframe
-            @launch="sliderLauncherStore.launch"
-        />
+      <BlockPreview/>
 
-      </swiper-slide>
-    </client-only>
-  </SliderLauncher>
+    </swiper-slide>
+  </SliderMain>
 </template>
 
 <style scoped lang="scss">
+.gsky-phone {
+  position: absolute;
+  left: 50vw;
+  bottom: -45px;
+  margin-left: -280px;
+  height: 75vh;
+  transform: translate(-50%);
+
+  @media(max-height: 640px) {
+    display: none;
+  }
+}
 </style>

@@ -2,7 +2,7 @@ export const useAppPreviewStore = defineStore("app/preview", () => {
     const username: Ref<string> = ref('')
     const profile: Ref<any> = ref(undefined)
 
-    const src: Ref<string> = ref('https://gridsky.app/gridsky.app')
+    const src: Ref<string> = ref('')
 
     function setProfile(value: any) {
         profile.value = value

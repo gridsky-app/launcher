@@ -7,11 +7,16 @@ defineProps<{
 </script>
 
 <template>
-  <h1 class="text-h1 font-weight-thin ml-n2" v-text="title" />
+  <h3 class="text-h1 font-weight-medium ml-n1" v-text="title" />
   <div class="text-overline text-grey-darken-2 mt-6" v-text="subtitle" />
   <p>
     {{description[0]}}<br />
-    {{description[1]}}
+    <template v-if="description[1]">
+      {{description[1]}}<br />
+    </template>
+    <template v-if="description[2]">
+      {{description[2]}}<br />
+    </template>
   </p>
   <BlockHeroLinks>
     <slot />

@@ -17,6 +17,7 @@ function onLaunchClick(e: any) {
         :description="[
           $t('block.intro.description.line1'),
           $t('block.intro.description.line2'),
+          $t('block.intro.description.line3'),
         ]"
     >
       <BlockHeroLinks>

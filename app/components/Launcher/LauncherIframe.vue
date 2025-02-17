@@ -37,7 +37,7 @@ onMounted(() => {
 <style scoped lang="scss">
 iframe {
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   border: 0;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -49,7 +49,7 @@ iframe {
   height: 100dvh;
   border-left: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   margin-left: -1px;
-  z-index: 999999;
+  z-index: 9;
 
   @media(max-width: 599px) {
     width: 100vw;

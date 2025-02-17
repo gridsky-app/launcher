@@ -18,6 +18,7 @@ export const useSliderMainStore = defineStore("slider/main", () => {
     }
 
     return {
+        slider,
         setup,
         slideTo,
     }

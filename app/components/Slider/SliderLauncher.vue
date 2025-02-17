@@ -21,17 +21,3 @@ onMounted(() => {
     <slot />
   </swiper-container>
 </template>
-
-<style scoped lang="scss">
-.gsky-horizontal-slider {
-  padding-top: 60px;
-
-  @media(max-width: 599px) {
-    padding-top: 80px;
-
-    :deep(swiper-container) {
-      height: calc(100dvh - 80px);
-    }
-  }
-}
-</style>

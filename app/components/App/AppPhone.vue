@@ -34,7 +34,8 @@
   border-radius: 20px;
   aspect-ratio: 9/16;
   background: black;
-  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 7px #222, 0px 0px 0px 8px #444;
+  box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 7px #222, 0px 0px 0px 8px #242424;
+  z-index: 2;
 
   &__nav {
     position: absolute;
@@ -54,16 +55,15 @@
 
       .iconify {
         display: inline-block;
-        font-size: 16px;
+        font-size: 14px;
       }
     }
 
     .gsky-phone__datetime {
       display: block;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 12px;
       margin-left: 32px;
-      margin-top: 2px;
     }
 
     b {

@@ -34,6 +34,16 @@ export default defineNuxtConfig({
         '@/styles/index.scss',
     ],
 
+    site: {
+        url: 'https://gridsky.social',
+        name: 'Gridsky'
+    },
+
+    sitemap: {
+        // exclude all app sources
+        excludeAppSources: true,
+    },
+
     modules: [
         (_options, nuxt) => {
             nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -44,6 +54,7 @@ export default defineNuxtConfig({
             })
         },
         '@nuxtjs/i18n',
+        //'@nuxtjs/sitemap',
         '@nuxt/fonts',
         '@nuxt/icon',
         'nuxt-swiper',
@@ -62,11 +73,22 @@ export default defineNuxtConfig({
             useCookie: true,
             cookieKey: 'i18n_redirected',
             redirectOn: 'root',
+        },
+        pages: {
+            'instagram-alternative-for-bluesky': false,
+            'legal': false,
+            'unleash': false,
         }
     },
 
     build: {
         transpile: ['vuetify'],
+    },
+
+    runtimeConfig: {
+        public: {
+            promoHandle: '',
+        }
     },
 
     vite: {
@@ -96,12 +118,6 @@ export default defineNuxtConfig({
                 imports: ['useDebounceFn']
             }
         ]
-    },
-
-    nitro: {
-        output: {
-            publicDir: path.join(__dirname, 'docs')
-        }
     },
 
     compatibilityDate: '2024-11-28',

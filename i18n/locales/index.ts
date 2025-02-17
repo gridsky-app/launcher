@@ -10,6 +10,7 @@ export default {
             nav: {
                 explore: "Explore",
                 preview: "Preview",
+                unleash: "Unleash",
                 roadmap: "Roadmap",
                 roadmapStatus: "Getting ready",
                 feedback: "Feedback",
@@ -22,7 +23,8 @@ export default {
                 subtitle: "on a mission",
                 description: {
                     line1: "Bringing the Instagram experience",
-                    line2: "to the Bluesky social networks.",
+                    line2: "to the Bluesky decentralized network",
+                    line3: "but supercharged and customizable",
                 },
                 links: {
                     launch: "Launch",
@@ -34,7 +36,7 @@ export default {
                 subtitle: "your profile",
                 description: {
                     line1: "Let's see how your profile looks",
-                    line2: "on our brand-new Bluesky client.",
+                    line2: "on our brand-new Gridsky client"
                 }
             }
         },
@@ -56,7 +58,11 @@ export default {
             index: {
                 title: 'Bluesky with creativity superpowers',
                 description: 'Gridsky brings the Instagram experience to Bluesky, offering an alternative client that unleashes boundless creativity in your favorite social network',
-            }
+            },
+            vsInstagram: {
+                title: 'An alternative client, like Instagram on Bluesky',
+                description: 'Gridsky brings the Instagram experience to Bluesky, offering an alternative client that unleashes boundless creativity in your favorite social network',
+            },
         }
     },
     es: {
@@ -70,6 +76,7 @@ export default {
             nav: {
                 explore: "Explorar",
                 preview: "Previa",
+                unleash: "Desata",
                 roadmap: "Ruta",
                 roadmapStatus: "En preparación",
                 feedback: "Comentarios",
@@ -82,7 +89,8 @@ export default {
                 subtitle: "en una misión",
                 description: {
                     line1: "Llevando la experiencia de Instagram",
-                    line2: "a la red social de Bluesky.",
+                    line2: "a la red descentralizada de Bluesky",
+                    line3: "pero superpotenciada y personalizable"
                 },
                 links: {
                     launch: "Iniciar",
@@ -93,8 +101,8 @@ export default {
                 title: "Previa",
                 subtitle: "tu perfil",
                 description: {
-                    line1: "Veamos cómo aparece tu perfil",
-                    line2: "en nuestro nuevo cliente de Bluesky.",
+                    line1: "Veamos cómo se ve tu perfil",
+                    line2: "en nuestro nuevo cliente Gridsky"
                 },
             }
         },
@@ -130,6 +138,7 @@ export default {
             nav: {
                 explore: "Explorer",
                 preview: "Aperçu",
+                unleash: "Libère",
                 roadmap: "Roadmap",
                 roadmapStatus: "En préparation",
                 feedback: "Retour",
@@ -141,8 +150,9 @@ export default {
                 title: "Gridsky",
                 subtitle: "en mission",
                 description: {
-                    line1: "Apporter l'expérience Instagram",
-                    line2: "au réseau social Bluesky.",
+                    line1: "Apportant l'expérience Instagram",
+                    line2: "au réseau décentralisé Bluesky",
+                    line3: "mais boosté et personnalisable"
                 },
                 links: {
                     launch: "Lancer",
@@ -153,8 +163,8 @@ export default {
                 title: "Aperçu",
                 subtitle: "ton profil",
                 description: {
-                    line1: "Voyons comment apparaît ton profil",
-                    line2: "sur notre nouveau client Bluesky.",
+                    line1: "Voyons à quoi ressemble votre profil",
+                    line2: "sur notre tout nouveau client Gridsky"
                 },
             }
         },
@@ -190,6 +200,7 @@ export default {
             nav: {
                 explore: "Erkunden",
                 preview: "Vorschau",
+                unleash: "Entfesseln",
                 roadmap: "Fahrplan",
                 roadmapStatus: "In Vorbereitung",
                 feedback: "Feedback",
@@ -201,8 +212,9 @@ export default {
                 title: "Gridsky",
                 subtitle: "auf einer Mission",
                 description: {
-                    line1: "Bringt das Instagram-Erlebnis",
-                    line2: "ins Bluesky-Netzwerk.",
+                    line1: "Bringt gerade das Instagram-Erlebnis",
+                    line2: "ins dezentrale Bluesky-Netzwerk",
+                    line3: "aber leistungsstärker und anpassbar"
                 },
                 links: {
                     launch: "Starten",
@@ -249,7 +261,8 @@ export default {
             banner: "Il nostro server Discord è piuttosto vuoto! Entra e aiutaci a farlo partire",
             nav: {
                 explore: "Esplora",
-                preview: "Preview",
+                preview: "Anteprima",
+                unleash: "Scatena",
                 roadmap: "Roadmap",
                 roadmapStatus: "In preparazione",
                 feedback: "Feedback",
@@ -261,8 +274,9 @@ export default {
                 title: "Gridsky",
                 subtitle: "in una missione",
                 description: {
-                    line1: "Portando l'esperienza Instagram",
-                    line2: "sulla rete sociale di Bluesky.",
+                    line1: "Portando l'esperienza di Instagram",
+                    line2: "sulla rete decentralizzata Bluesky",
+                    line3: "ma potenziata e personalizzabile"
                 },
                 links: {
                     launch: "Avvia",
@@ -270,11 +284,11 @@ export default {
                 }
             },
             preview: {
-                title: "Preview",
+                title: "Anteprima",
                 subtitle: "del tuo profilo",
                 description: {
-                    line1: "Vediamo come appare il tuo profilo",
-                    line2: "sul nostro nuovo client per Bluesky.",
+                    line1: "Scopri come appare il tuo profilo",
+                    line2: "sul nostro nuovo client per Bluesky",
                 },
             },
         },
@@ -310,6 +324,7 @@ export default {
             nav: {
                 explore: "Explorar",
                 preview: "Pré-visualizar",
+                unleash: "Liberar",
                 roadmap: "Roteiro",
                 roadmapStatus: "Em preparação",
                 feedback: "Feedback",
@@ -322,7 +337,8 @@ export default {
                 subtitle: "em uma missão",
                 description: {
                     line1: "Trazendo a experiência do Instagram",
-                    line2: "para a rede social Bluesky.",
+                    line2: "para a rede descentralizada Bluesky",
+                    line3: "mas turbinada e personalizável"
                 },
                 links: {
                     launch: "Iniciar",
@@ -333,8 +349,8 @@ export default {
                 title: "Pré-visualizar",
                 subtitle: "seu perfil",
                 description: {
-                    line1: "Vamos ver como seu perfil",
-                    line2: "aparece no nosso novo cliente Bluesky.",
+                    line1: "Vamos ver como o seu perfil aparece",
+                    line2: "no nosso novo cliente Gridsky"
                 },
             }
         },
