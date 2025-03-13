@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     },
 
     app: {
-        baseURL: process.env.NUXT_PUBLIC_BASE_URL,
+        baseURL: '/launcher/',
     },
 
     css: [
