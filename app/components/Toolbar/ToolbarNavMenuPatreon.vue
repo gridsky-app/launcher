@@ -8,7 +8,7 @@ defineProps<{
       href="https://patreon.com/gridsky"
       target="_blank"
       title="Patreon"
-      subtitle="Unlock perks for your profile<br /> and fuel the development"
+      subtitle="Make it happen"
       icon="simple-icons:patreon"
   >
   </ToolbarNavMenu>

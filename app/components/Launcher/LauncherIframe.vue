@@ -49,6 +49,7 @@ iframe {
   height: 100dvh;
   border-left: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   margin-left: -1px;
+  background: #000000;
   z-index: 9;
 
   @media(max-width: 599px) {
@@ -60,7 +61,7 @@ iframe {
 
   &--visible {
     iframe {
-      opacity: 1;
+      opacity: 0.8;
     }
   }
 

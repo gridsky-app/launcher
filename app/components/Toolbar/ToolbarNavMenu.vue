@@ -41,4 +41,8 @@ defineProps<{
   bottom: -12px;
   opacity: 0.05;
 }
+
+.text-grey {
+  font-size: 17px;
+}
 </style>

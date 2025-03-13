@@ -58,9 +58,10 @@ onBeforeMount(changeMobileStrength)
   padding: 32px 0 0 0;
   border-radius: 20px;
   aspect-ratio: 9/16;
+  height: 70vh;
   background: black;
   box-shadow: 0px 0px 0px 5px #000, 0px 0px 0px 7px #222, 0px 0px 0px 8px #242424;
-  z-index: 2;
+  z-index: 1;
 
   &__nav {
     position: absolute;
@@ -131,6 +132,16 @@ onBeforeMount(changeMobileStrength)
 
   &__content {
     height: 100%;
+
+    &:after {
+      box-shadow: inset 0 -1px 0 0 #000000;
+      position: absolute;
+      bottom: 0;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      content: '';
+    }
   }
 
   :deep(iframe) {
@@ -138,6 +149,7 @@ onBeforeMount(changeMobileStrength)
     border-radius: 0 0 20px 20px;
     min-width: 100%;
     min-height: 100%;
+    zoom: 0.9;
   }
 }
 </style>

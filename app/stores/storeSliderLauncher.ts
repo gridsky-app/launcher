@@ -21,15 +21,11 @@ export const useSliderLauncherStore = defineStore("slider/launcher", () => {
     function launch() {
         window.location.href = 'https://gridsky.app'
 
-        /*
         slider.value.swiper.slideTo(1, 500)
 
         setTimeout(() => {
-            window.location.href = 'https://gridsky.app'
+            //window.location.href = 'https://gridsky.app'
         }, window.innerWidth >= 960 ? 5000 : 2500)
-
-        phoneZ.value = 0
-         */
     }
 
     return {

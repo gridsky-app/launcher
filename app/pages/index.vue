@@ -2,6 +2,7 @@
 const appPreviewStore = useAppPreviewStore()
 const sliderLauncherStore = useSliderLauncherStore()
 const sliderMainStore = useSliderMainStore()
+const display = useDisplay()
 const {t} = useI18n()
 
 useSeoMeta({
@@ -10,47 +11,109 @@ useSeoMeta({
   ogImage: '/assets/og-image.png'
 })
 
-definePageMeta({
-  layout: 'slider',
-})
+defineI18nRoute(false)
 </script>
 
 <template>
-  <AppPhone class="hidden-sm-and-down">
-    <iframe :src="appPreviewStore.src"/>
-  </AppPhone>
+  <SectionPhone>
+    <v-row no-gutters class="fill-height">
+      <v-col align-self="center">
 
-  <ToolbarNav/>
+        <BlockIntro
+            class="mx-auto"
+            @launch="sliderLauncherStore.launch"
+            @preview="sliderMainStore.slideTo(1)"
+        />
 
-  <SliderMain>
+      </v-col>
+      <v-col align-self="center" :cols="5" class="text-left hidden-sm-and-down">
 
-    <swiper-slide>
+        <AppPhone class="mx-auto hidden-sm-and-down">
+          <iframe src="https://gridsky.app/superchinois801"/>
+          <v-chip
+              class="text-overline" color="#666"
+              href="https://patreon.com/join/gridsky" target="_blank"
+          >
+            Get featured
+          </v-chip>
+        </AppPhone>
 
-      <BlockIntro
-          @launch="sliderLauncherStore.launch"
-          @preview="sliderMainStore.slideTo(1)"
-      />
+      </v-col>
+    </v-row>
+  </SectionPhone>
 
-    </swiper-slide>
-    <swiper-slide>
+  <SectionSpacedImage
+      image="/media/screen-profile.webp"
+  >
+    <h4 class="text-h4 mt-4 mb-8">
+      Your Profile,<br class="hidden-sm-and-up"/>
+      Your Style
+    </h4>
+    <p class="text-grey-lighten-1">
+      Gridsky is an alternative Bluesky client designed for creative users, offering a more customizable and visually
+      engaging experience. It offers a refined, minimalistic design that puts your content first.
+      Don't expect it to be perfect 🚧
+    </p>
+  </SectionSpacedImage>
 
-      <BlockPreview/>
+  <SectionSpacedImage
+      image="/media/screen-timeline.webp"
+  >
+    <h4 class="text-h4 mt-4 mb-8">
+      A cleaner <br class="hidden-sm-and-up"/>Instagram <br class="hidden-sm-and-up"/>experience
+    </h4>
+    <p class="text-grey-lighten-1">
+      A place where you can finally scroll through your timeline without intrusive ads or attention-grabbing gimmicks.
+      It’s a calm space to reboot your profile, focus on creativity, and showcase your content the way it deserves 🗿
+    </p>
+  </SectionSpacedImage>
 
-    </swiper-slide>
-  </SliderMain>
+  <SectionPhone>
+    <v-row no-gutters class="fill-height">
+      <v-col align-self="center" :cols="5" class="text-right hidden-sm-and-down">
+
+        <AppPhone class="mx-auto hidden-sm-and-down">
+          <iframe :src="appPreviewStore.src"/>
+          <v-chip
+              class="text-overline" color="#666"
+              href="https://patreon.com/join/gridsky" target="_blank"
+          >
+            Get featured
+          </v-chip>
+        </AppPhone>
+
+      </v-col>
+      <v-col align-self="center">
+
+        <BlockPreview
+            class="mx-auto"
+            @launch="sliderLauncherStore.launch"
+            @preview="sliderMainStore.slideTo(1)"
+        />
+
+      </v-col>
+    </v-row>
+  </SectionPhone>
 </template>
 
 <style scoped lang="scss">
-.gsky-phone {
-  position: absolute;
-  left: 50vw;
-  bottom: -45px;
-  margin-left: -280px;
-  height: 75vh;
-  transform: translate(-50%);
+section {
+  max-height: 960px;
+  height: calc(100vh - 96px);
 
-  @media(max-height: 640px) {
-    display: none;
+  @media(min-width: 600px) {
+    min-height: 720px;
   }
+}
+
+.gsky-phone {
+  height: 560px;
+}
+
+.v-chip {
+  position: absolute;
+  left: 50%;
+  bottom: -56px;
+  transform: translateX(-50%);
 }
 </style>

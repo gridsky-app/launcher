@@ -41,6 +41,7 @@ watch(() => appPreviewStore.username, (val) => {
       rounded="lg"
       spellcheck="false"
       hide-details
+      base-color="grey-darken-1"
       bg-color="transparent"
       :max-width="340"
   >

@@ -5,7 +5,7 @@ const display = useDisplay()
 const firstSliderWidth = computed(() => {
   if (display.lgAndUp.value) {
     return {
-      //width: 'calc(100vw - 319px)'
+      width: 'calc(100vw - 319px)'
     }
   }
 

@@ -4,7 +4,13 @@
 <template>
   <v-layout>
 
-    <NuxtPage/>
+    <v-main>
+
+      <ToolbarNav/>
+
+      <NuxtPage/>
+
+    </v-main>
 
   </v-layout>
 </template>

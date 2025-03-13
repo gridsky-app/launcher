@@ -5,7 +5,6 @@ const appPreviewStore = useAppPreviewStore()
 const runtimeConfig = useRuntimeConfig()
 
 onMounted(() => {
-  console.log('https://gridsky.app/' + runtimeConfig.public.promoHandle)
   appPreviewStore.setSrc('https://gridsky.app/' + runtimeConfig.public.promoHandle)
 })
 
@@ -19,20 +18,9 @@ useHead({
 <template>
   <v-app>
 
-
-    <!--
-    <header class="gsky-header">
-      <ToolbarBanner class="d-none"/>
-      <ToolbarNav/>
-    </header>
-    -->
-
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
-
-
-    <AppSplash/>
 
   </v-app>
 </template>

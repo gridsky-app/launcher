@@ -67,7 +67,7 @@ export default defineNuxtConfig({
     ],
 
     i18n: {
-        locales: ['en', 'it', 'es', 'fr', 'de', 'pt'],
+        locales: ['en'], // 'it', 'es', 'fr', 'de', 'pt'
         defaultLocale: 'en',
         detectBrowserLanguage: {
             useCookie: true,

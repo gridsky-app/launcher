@@ -19,24 +19,25 @@ export default {
         },
         block: {
             intro: {
-                title: "Gridsky",
-                subtitle: "on a mission",
+                title: "On a mission",
+                subtitle: "Introducing Gridsky",
                 description: {
                     line1: "Bringing the Instagram experience",
-                    line2: "to the Bluesky decentralized network",
-                    line3: "but supercharged and customizable",
+                    line2: "to the Bluesky decentralized network,",
+                    line3: "but supercharged and limitless 💫",
                 },
                 links: {
-                    launch: "Launch",
-                    preview: "Preview your profile"
+                    launch: "Try it now",
+                    support: "Support on Patreon"
                 }
             },
             preview: {
-                title: "Preview",
-                subtitle: "your profile",
+                title: "Let's go",
+                subtitle: "your profile, your style",
                 description: {
-                    line1: "Let's see how your profile looks",
-                    line2: "on our brand-new Gridsky client"
+                    line1: "Check how your profile performs today",
+                    line2: "on our heavily under-development client.",
+                    line3: "Consider this just a little taste 🫐"
                 }
             }
         },
@@ -275,7 +276,7 @@ export default {
                 subtitle: "in una missione",
                 description: {
                     line1: "Portando l'esperienza di Instagram",
-                    line2: "sulla rete decentralizzata Bluesky",
+                    line2: "sulla rete decentralizzata di Bluesky",
                     line3: "ma potenziata e personalizzabile"
                 },
                 links: {
