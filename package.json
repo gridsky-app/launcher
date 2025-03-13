@@ -1,0 +1,23 @@
+{
+  "name": "gridsky-launcher",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "dxlliv",
+    "url": "https://github.com/dxlliv"
+  },
+  "scripts": {
+    "build": "nuxt generate",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate --dev",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.11.0",
+    "nuxt": "^3.16.0",
+    "nuxt-swiper": "^2.0.0",
+    "sass": "^1.85.1",
+    "vite-plugin-vuetify": "^2.1.0"
+  }
+}
