@@ -45,7 +45,7 @@ function onLaunch() {
   slider.value.swiper.slideTo(1, 500)
 
   setTimeout(() => {
-    window.location.href = 'https://gridsky.pages.dev'
+    window.location.href = 'https://gridsky.app'
   }, display.mdAndUp ? 5000 : 1500)
 }
 

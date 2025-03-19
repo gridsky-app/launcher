@@ -22,7 +22,7 @@ function onLaunchClick(e: any) {
     </p>
     <div class="text-subtitle-1 mt-2">
       <a
-          href="https://gridsky.pages.dev"
+          href="https://gridsky.app"
           class="text-grey mr-4"
           @click="onLaunchClick"
       >
