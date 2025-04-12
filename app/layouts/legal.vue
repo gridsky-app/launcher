@@ -5,9 +5,9 @@
   <v-layout>
 
     <v-main>
-      <v-container class="fill-height px-0 py-16">
+      <v-container class="px-8 px-md-0">
         <v-row>
-          <v-col :md="9" :offset-md="2">
+          <v-col :md="9" :offset-md="1">
 
             <div>
               <NuxtPage/>
@@ -22,10 +22,19 @@
 </template>
 
 <style scoped lang="scss">
+.v-layout {
+  height: 100vh !important;
+}
+
 .v-main {
+  overflow-y: scroll !important;
+}
+
+.v-container {
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
+
 :deep(section) {
   &:not(:last-child) {
     padding: 0 0 24px 0;

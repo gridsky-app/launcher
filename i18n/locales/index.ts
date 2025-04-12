@@ -24,7 +24,7 @@ export default {
                 description: {
                     line1: "Bringing the Instagram experience",
                     line2: "to the Bluesky decentralized network,",
-                    line3: "but supercharged and limitless 💫",
+                    line3: "but supercharged and limitless 🐱",
                 },
                 links: {
                     launch: "Try it now",

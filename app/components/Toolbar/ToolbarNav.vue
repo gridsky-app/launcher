@@ -18,11 +18,13 @@ const sliderLauncherStore = useSliderLauncherStore()
       <v-col class="flex-grow-1 gsky-toolbar-nav__links">
 
         <v-breadcrumbs class="hidden-sm-and-down mx-auto text-grey-lighten-2">
+          <!--
           <v-breadcrumbs-item
               class="ml-n3 mx-sm-2 cursor-pointer"
               to="/"
               title="Discover"
           />
+          -->
 
           <v-breadcrumbs-item
               class="cursor-pointer"
@@ -43,6 +45,7 @@ const sliderLauncherStore = useSliderLauncherStore()
                 channel="#feedback"
             />
           </v-breadcrumbs-item>
+          <!--
           <v-breadcrumbs-item
               class="hidden-sm-and-down"
           >
@@ -50,12 +53,13 @@ const sliderLauncherStore = useSliderLauncherStore()
             <ToolbarNavMenuPatreon
             />
           </v-breadcrumbs-item>
+          -->
           <v-breadcrumbs-item
               href="https://patreon.com/gridsky"
               target="_blank"
               class="hidden-sm-and-down"
           >
-            Blog
+            Changelog
           </v-breadcrumbs-item>
           <v-breadcrumbs-item
               class="ml-6 hidden-xs"
@@ -67,12 +71,14 @@ const sliderLauncherStore = useSliderLauncherStore()
               <Icon name="simple-icons:bluesky" :size="18"/>
             </nuxt-link>
           </v-breadcrumbs-item>
+          <!--
           <v-breadcrumbs-item
               class="hidden-xs"
               href="mailto:sponsor@gridsky.social"
           >
             <Icon name="lucide:at-sign" :size="19" style="margin-top: -4px;"/>
           </v-breadcrumbs-item>
+          -->
         </v-breadcrumbs>
 
       </v-col>
