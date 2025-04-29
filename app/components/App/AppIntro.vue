@@ -18,7 +18,7 @@ function onLaunchClick(e: any) {
     </div>
     <p class="text-subtitle-1">
       The super duper client for Bluesky is coming together! 🫐<br />
-      Give us the time to make you proud up in the atmosphere.
+      Give us the time to make you proud up in the ATmosphere.
     </p>
     <div class="text-subtitle-1 mt-2">
       <a
